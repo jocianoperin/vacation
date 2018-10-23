@@ -15,15 +15,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void toLocal(View view) {
 
-        Intent intent = new Intent(this, Local.class);
+        Intent intent = new Intent(this, LocalActivity.class);
         startActivity(intent);
     }
 
     public void toData(View view) {
 
-        Intent intent = new Intent(this, Data.class);
+        Intent intent = new Intent(this, DataActivity.class);
         startActivity(intent);
     }
-
 
 }

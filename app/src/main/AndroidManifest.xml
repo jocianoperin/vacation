@@ -16,8 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Local" />
-        <activity android:name=".Data"></activity>
+        <activity android:name=".LocalActivity" />
+        <activity android:name=".DataActivity" />
+        <activity android:name=".DetalhesActivity"></activity>
     </application>
 
 </manifest>

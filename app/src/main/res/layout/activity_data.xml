@@ -4,48 +4,89 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Data"
+    tools:context=".DataActivity"
     android:orientation="vertical"
     android:layout_gravity="center">
 
+
     <TextView
-        android:layout_gravity="center"
-        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/DataInicio" />
+        android:layout_gravity="center"
+        android:text="Selecione a data de início das férias"/>
+
     <Button
         android:layout_gravity="center"
         android:id="@+id/btnDataInicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:onClick="showCalendar"
-        android:text="@string/btnDataInicio" />
+        android:text="Selecionar data"
+        android:layout_marginTop="30dp">
 
-    <TextView
-        android:layout_gravity="center"
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:text="@string/DataFinal" />
-    <Button
-        android:layout_gravity="center"
-        android:id="@+id/btnDataFinal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:onClick="showCalendar"
-        android:text="@string/btnDataFinal" />
+    </Button>
 
     <Button
         android:layout_gravity="center"
-        android:id="@+id/Ok"
+        android:id="@+id/btnBuscarLocais"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:text="Buscar locais"
         android:onClick="toLocal"
-        android:text="@string/btnLocalOk" />
+        android:layout_marginTop="30dp">
+
+    </Button>
+
+
+
+    <!--<TextView-->
+        <!--android:layout_gravity="center"-->
+        <!--android:id="@+id/textView1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/DataInicio" />-->
+    <!--&lt;!&ndash;<Button&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/btnDataInicio"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginTop="10dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:onClick="showCalendar"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="@string/btnDataInicio" />&ndash;&gt;-->
+    <!--<DatePicker-->
+        <!--android:id="@+id/dtpDataInicio"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content">-->
+    <!--</DatePicker>-->
+
+    <!--<TextView-->
+        <!--android:layout_gravity="center"-->
+        <!--android:id="@+id/textView2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="70dp"-->
+        <!--android:text="@string/DataFinal" />-->
+    <!--&lt;!&ndash;<Button&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/btnDataFinal"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginTop="10dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:onClick="showCalendar"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="@string/btnDataFinal" />&ndash;&gt;-->
+    <!--<DatePicker-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/dtpDataFinal">-->
+
+    <!--</DatePicker>-->
+
+    <!--<Button-->
+        <!--android:layout_gravity="center"-->
+        <!--android:id="@+id/Ok"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="150dp"-->
+        <!--android:onClick="toLocal"-->
+        <!--android:text="@string/btnLocalOk" />-->
 
 </LinearLayout>
