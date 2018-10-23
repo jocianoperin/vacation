@@ -13,8 +13,7 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/DataInicio"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:text="@string/DataInicio" />
     <Button
         android:layout_gravity="center"
         android:id="@+id/btnDataInicio"
@@ -30,8 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
-        android:text="@string/DataFinal"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:text="@string/DataFinal" />
     <Button
         android:layout_gravity="center"
         android:id="@+id/btnDataFinal"
