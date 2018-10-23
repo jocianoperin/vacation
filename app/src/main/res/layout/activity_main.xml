@@ -28,7 +28,7 @@
             android:id="@+id/btnLocal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Local"
+            android:text="@string/Local"
             android:onClick="toLocal"/>
 
         <TextView
@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:onClick="toData"
-            android:text="Data" />
+            android:text="@string/Data" />
 
         <TextView
             android:layout_weight="1"

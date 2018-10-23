@@ -1,45 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".Data"
     android:orientation="vertical"
-    tools:context=".Data">
+    android:layout_gravity="center">
 
     <TextView
-        android:id="@+id/txtDataInicio"
-        android:layout_width="fill_parent"
+        android:layout_gravity="center"
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Data de início"
-        android:textSize="18sp" />
-
+        android:text="@string/DataInicio"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
     <Button
+        android:layout_gravity="center"
         android:id="@+id/btnDataInicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="MostrarData"
-        android:text="Escolher uma data" />
+        android:layout_marginTop="10dp"
+        android:onClick="showCalendar"
+        android:text="@string/btnDataInicio" />
 
     <TextView
-        android:id="@+id/txtDataFinal"
-        android:layout_width="fill_parent"
+        android:layout_gravity="center"
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Data de término"
-        android:textSize="18sp" />
-
+        android:layout_marginTop="70dp"
+        android:text="@string/DataFinal"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
     <Button
+        android:layout_gravity="center"
         android:id="@+id/btnDataFinal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="MostrarData"
-        android:text="Escolher uma data" />
+        android:layout_marginTop="10dp"
+        android:onClick="showCalendar"
+        android:text="@string/btnDataFinal" />
 
     <Button
-        android:id="@+id/btn"
+        android:layout_gravity="center"
+        android:id="@+id/Ok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button">
-    </Button>
+        android:layout_marginTop="150dp"
+        android:onClick="toLocal"
+        android:text="@string/btnLocalOk" />
 
 </LinearLayout>

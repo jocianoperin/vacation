@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Vacation</string>
+    <string name="DataInicio">DataInicio</string>
+    <string name="btnDataInicio">DataInicio</string>
+    <string name="btnDataFinal">DataFinal</string>
+    <string name="DataFinal">DataFinal</string>
+    <string name="btnOk">Ok</string>
+    <string name="btnLocalOk">Ok</string>
+    <string name="Data">Data</string>
+    <string name="Local">Local</string>
 </resources>

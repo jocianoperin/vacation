@@ -2,6 +2,8 @@ package com.example.jocia.vacation;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class Local extends AppCompatActivity {
 
@@ -22,7 +24,5 @@ public class Local extends AppCompatActivity {
         criaPontos[7] = new PontosTuristicos("Dois Vizinhos", "Inverno");
         criaPontos[8] = new PontosTuristicos("Quedas do Iguaçu", "Verão");
         criaPontos[9] = new PontosTuristicos("Dois Vizinhos", "Verão");
-
     }
-
 }
