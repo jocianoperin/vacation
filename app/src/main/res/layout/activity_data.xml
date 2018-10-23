@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Data">
+
+    <TextView
+        android:id="@+id/txtDataInicio"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Data de início"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnDataInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="MostrarData"
+        android:text="Escolher uma data" />
+
+    <TextView
+        android:id="@+id/txtDataFinal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Data de término"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnDataFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="MostrarData"
+        android:text="Escolher uma data" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button">
+    </Button>
+
+</LinearLayout>
