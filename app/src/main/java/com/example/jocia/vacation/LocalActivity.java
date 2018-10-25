@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +25,7 @@ public class LocalActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_local);
+
         lvOpcoes = (ListView) findViewById(R.id.locais);
 
         opcoes = new ArrayList<String>();
@@ -85,11 +87,15 @@ public class LocalActivity extends AppCompatActivity {
 
         Toast.makeText(this, "Selecionou destino0", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(LocalActivity.this, DetalhesActivity.class);
+        intent.putExtra("destino_id", 0);
         startActivity(intent);
     }
 
     private void destino1() {
         PontosTuristicos criaPontos = new PontosTuristicos("Quedas do Iguaçu", "Verão");
+        Intent intent = new Intent(LocalActivity.this, DetalhesActivity.class);
+        intent.putExtra("destino_id", 1);
+        startActivity(intent);
 
         Toast.makeText(this, "Selecionou destino1", Toast.LENGTH_SHORT).show();
 //        Intent it = new Intent(LocalActivity.this, actSobre.class);
@@ -97,6 +103,9 @@ public class LocalActivity extends AppCompatActivity {
     }
     private void destino2() {
         PontosTuristicos criaPontos = new PontosTuristicos("Quedas do Iguaçu", "Verão");
+        Intent intent = new Intent(LocalActivity.this, DetalhesActivity.class);
+        intent.putExtra("destino_id", 2);
+        startActivity(intent);
 
         Toast.makeText(this, "Selecionou destino2", Toast.LENGTH_SHORT).show();
 //        Intent it = new Intent(LocalActivity.this, actSobre.class);
@@ -105,12 +114,20 @@ public class LocalActivity extends AppCompatActivity {
     private void destino3() {
         PontosTuristicos criaPontos = new PontosTuristicos("Quedas do Iguaçu", "Verão");
 
+        Intent intent = new Intent(LocalActivity.this, DetalhesActivity.class);
+        intent.putExtra("destino_id", 3);
+        startActivity(intent);
+
         Toast.makeText(this, "Selecionou destino3", Toast.LENGTH_SHORT).show();
 //        Intent it = new Intent(LocalActivity.this, actSobre.class);
 //        startActivity(it);
     }
     private void destino4() {
         PontosTuristicos criaPontos = new PontosTuristicos("Quedas do Iguaçu", "Verão");
+
+        Intent intent = new Intent(LocalActivity.this, DetalhesActivity.class);
+        intent.putExtra("destino_id", 4);
+        startActivity(intent);
 
         Toast.makeText(this, "Selecionou destino3", Toast.LENGTH_SHORT).show();
 //        Intent it = new Intent(LocalActivity.this, actSobre.class);
@@ -119,12 +136,20 @@ public class LocalActivity extends AppCompatActivity {
     private void destino5() {
         PontosTuristicos criaPontos = new PontosTuristicos("Quedas do Iguaçu", "Verão");
 
+        Intent intent = new Intent(LocalActivity.this, DetalhesActivity.class);
+        intent.putExtra("destino_id", 5);
+        startActivity(intent);
+
         Toast.makeText(this, "Selecionou destino5", Toast.LENGTH_SHORT).show();
 //        Intent it = new Intent(LocalActivity.this, actSobre.class);
 //        startActivity(it);
     }
     private void destino6() {
         PontosTuristicos criaPontos = new PontosTuristicos("Quedas do Iguaçu", "Verão");
+
+        Intent intent = new Intent(LocalActivity.this, DetalhesActivity.class);
+        intent.putExtra("destino_id", 6);
+        startActivity(intent);
 
         Toast.makeText(this, "Selecionou destino6", Toast.LENGTH_SHORT).show();
 //        Intent it = new Intent(LocalActivity.this, actSobre.class);
@@ -133,6 +158,10 @@ public class LocalActivity extends AppCompatActivity {
     private void destino7() {
         PontosTuristicos criaPontos = new PontosTuristicos("Quedas do Iguaçu", "Verão");
 
+        Intent intent = new Intent(LocalActivity.this, DetalhesActivity.class);
+        intent.putExtra("destino_id", 7);
+        startActivity(intent);
+
         Toast.makeText(this, "Selecionou destino7", Toast.LENGTH_SHORT).show();
 //        Intent it = new Intent(LocalActivity.this, actSobre.class);
 //        startActivity(it);
@@ -140,12 +169,20 @@ public class LocalActivity extends AppCompatActivity {
     private void destino8() {
         PontosTuristicos criaPontos = new PontosTuristicos("Quedas do Iguaçu", "Verão");
 
+        Intent intent = new Intent(LocalActivity.this, DetalhesActivity.class);
+        intent.putExtra("destino_id", 8);
+        startActivity(intent);
+
         Toast.makeText(this, "Selecionou destino8", Toast.LENGTH_SHORT).show();
 //        Intent it = new Intent(LocalActivity.this, actSobre.class);
 //        startActivity(it);
     }
     private void destino9() {
         PontosTuristicos criaPontos = new PontosTuristicos("Quedas do Iguaçu", "Verão");
+
+        Intent intent = new Intent(LocalActivity.this, DetalhesActivity.class);
+        intent.putExtra("destino_id", 9);
+        startActivity(intent);
 
         Toast.makeText(this, "Selecionou destino9", Toast.LENGTH_SHORT).show();
 //        Intent it = new Intent(LocalActivity.this, actSobre.class);

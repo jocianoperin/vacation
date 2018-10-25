@@ -26,6 +26,7 @@ public class DataActivity extends Activity implements Button.OnClickListener {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data);
+
         botao = (Button) findViewById(R.id.btnDataInicio);
         botao.setOnClickListener(this);
     }
@@ -43,6 +44,9 @@ public class DataActivity extends Activity implements Button.OnClickListener {
                 return new DatePickerDialog(this, mDateSetListener, ano, mes,
                         dia);
         }
+
+
+
         return null;
     }
 
