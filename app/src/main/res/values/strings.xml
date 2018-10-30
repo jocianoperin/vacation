@@ -8,4 +8,8 @@
     <string name="btnLocalOk">Ok</string>
     <string name="Data">Data</string>
     <string name="Local">Local</string>
+    <string name="selecione_mes">Selecione o mês</string>
+    <string name="txtSelecioneMês">Selecione o mês das férias</string>
+    <string name="btnBuscaLocais">Buscar locais</string>
+    <string name="detalhes_txt">Detalhes</string>
 </resources>

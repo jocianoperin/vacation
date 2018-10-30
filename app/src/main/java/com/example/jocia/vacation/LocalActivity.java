@@ -3,8 +3,6 @@ package com.example.jocia.vacation;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -22,134 +20,120 @@ public class LocalActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        int estacao = this.getIntent().getExtras().getInt("estacao", 0);
+
+        int destino = 0;
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_local);
         lvOpcoes = (ListView) findViewById(R.id.locais);
 
         opcoes = new ArrayList<String>();
 
-        opcoes.add("Destino0");
-        opcoes.add("Destino1");
-        opcoes.add("Destino2");
-        opcoes.add("Destino3");
-        opcoes.add("Destino4");
-        opcoes.add("Destino5");
-        opcoes.add("Destino6");
-        opcoes.add("Destino7");
-        opcoes.add("Destino8");
-        opcoes.add("Destino9");
 
-        adaptador = new ArrayAdapter<String>(LocalActivity.this, android.R.layout.simple_list_item_1, opcoes);
-        lvOpcoes.setAdapter(adaptador);
+
+        if (estacao == 1) {
+            opcoes.add("Porto de Galinhas");
+            opcoes.add("Morro de São Paulo");
+            opcoes.add("Natal");
+
+            adaptador = new ArrayAdapter<String>(LocalActivity.this, android.R.layout.simple_list_item_1, opcoes);
+            lvOpcoes.setAdapter(adaptador);
+
+        }else if (estacao == 2){
+            opcoes.add("Joinville");
+            opcoes.add("Holambra");
+            opcoes.add("Cunha");
+
+            adaptador = new ArrayAdapter<String>(LocalActivity.this, android.R.layout.simple_list_item_1, opcoes);
+            lvOpcoes.setAdapter(adaptador);
+
+        }else if (estacao == 3){
+            opcoes.add("Toscana");
+            opcoes.add("Praga");
+            opcoes.add("Hallstatt");
+
+            adaptador = new ArrayAdapter<String>(LocalActivity.this, android.R.layout.simple_list_item_1, opcoes);
+            lvOpcoes.setAdapter(adaptador);
+
+        }else if (estacao == 4){
+            opcoes.add("Bariloche");
+            opcoes.add("Mendoza");
+            opcoes.add("Santiago");
+
+            adaptador = new ArrayAdapter<String>(LocalActivity.this, android.R.layout.simple_list_item_1, opcoes);
+            lvOpcoes.setAdapter(adaptador);
+
+        }else {
+            opcoes.add("Porto de Galinhas");
+            opcoes.add("Morro de São Paulo");
+            opcoes.add("Natal");
+            opcoes.add("Joinville");
+            opcoes.add("Holambra");
+            opcoes.add("Cunha");
+            opcoes.add("Toscana");
+            opcoes.add("Praga");
+            opcoes.add("Hallstatt");
+            opcoes.add("Bariloche");
+            opcoes.add("Mendoza");
+            opcoes.add("Santiago");
+
+            adaptador = new ArrayAdapter<String>(LocalActivity.this, android.R.layout.simple_list_item_1, opcoes);
+            lvOpcoes.setAdapter(adaptador);
+
+        }
+
         lvOpcoes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
                     case 0:
-                        destino0();
+                        destino(0);
                         break;
                     case 1:
-                        destino1();
+                        destino(1);
                         break;
                     case 2:
-                        destino2();
+                        destino(2);
                         break;
                     case 3:
-                        destino3();
+                        destino(3);
                         break;
                     case 4:
-                        destino4();
+                        destino(4);
                         break;
                     case 5:
-                        destino5();
+                        destino(5);
                         break;
                     case 6:
-                        destino6();
+                        destino(6);
                         break;
                     case 7:
-                        destino7();
+                        destino(7);
                         break;
                     case 8:
-                        destino8();
+                        destino(8);
                         break;
                     case 9:
-                        destino9();
+                        destino(9);
+                        break;
+                    case 10:
+                        destino(10);
+                        break;
+                    case 11:
+                        destino(11);
                         break;
                 }
             }
         });
     }
 
-    private void destino0() {
-        PontosTuristicos criaPontos = new PontosTuristicos("Quedas do Iguaçu", "Verão");
+    private void destino(int destino) {
 
-        Toast.makeText(this, "Selecionou destino0", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(LocalActivity.this, DetalhesActivity.class);
+        intent.putExtra("Destino", destino);
         startActivity(intent);
-    }
-
-    private void destino1() {
-        PontosTuristicos criaPontos = new PontosTuristicos("Quedas do Iguaçu", "Verão");
-
-        Toast.makeText(this, "Selecionou destino1", Toast.LENGTH_SHORT).show();
-//        Intent it = new Intent(LocalActivity.this, actSobre.class);
-//        startActivity(it);
-    }
-    private void destino2() {
-        PontosTuristicos criaPontos = new PontosTuristicos("Quedas do Iguaçu", "Verão");
-
-        Toast.makeText(this, "Selecionou destino2", Toast.LENGTH_SHORT).show();
-//        Intent it = new Intent(LocalActivity.this, actSobre.class);
-//        startActivity(it);
-    }
-    private void destino3() {
-        PontosTuristicos criaPontos = new PontosTuristicos("Quedas do Iguaçu", "Verão");
-
-        Toast.makeText(this, "Selecionou destino3", Toast.LENGTH_SHORT).show();
-//        Intent it = new Intent(LocalActivity.this, actSobre.class);
-//        startActivity(it);
-    }
-    private void destino4() {
-        PontosTuristicos criaPontos = new PontosTuristicos("Quedas do Iguaçu", "Verão");
-
-        Toast.makeText(this, "Selecionou destino3", Toast.LENGTH_SHORT).show();
-//        Intent it = new Intent(LocalActivity.this, actSobre.class);
-//        startActivity(it);
-    }
-    private void destino5() {
-        PontosTuristicos criaPontos = new PontosTuristicos("Quedas do Iguaçu", "Verão");
-
-        Toast.makeText(this, "Selecionou destino5", Toast.LENGTH_SHORT).show();
-//        Intent it = new Intent(LocalActivity.this, actSobre.class);
-//        startActivity(it);
-    }
-    private void destino6() {
-        PontosTuristicos criaPontos = new PontosTuristicos("Quedas do Iguaçu", "Verão");
-
-        Toast.makeText(this, "Selecionou destino6", Toast.LENGTH_SHORT).show();
-//        Intent it = new Intent(LocalActivity.this, actSobre.class);
-//        startActivity(it);
-    }
-    private void destino7() {
-        PontosTuristicos criaPontos = new PontosTuristicos("Quedas do Iguaçu", "Verão");
-
-        Toast.makeText(this, "Selecionou destino7", Toast.LENGTH_SHORT).show();
-//        Intent it = new Intent(LocalActivity.this, actSobre.class);
-//        startActivity(it);
-    }
-    private void destino8() {
-        PontosTuristicos criaPontos = new PontosTuristicos("Quedas do Iguaçu", "Verão");
-
-        Toast.makeText(this, "Selecionou destino8", Toast.LENGTH_SHORT).show();
-//        Intent it = new Intent(LocalActivity.this, actSobre.class);
-//        startActivity(it);
-    }
-    private void destino9() {
-        PontosTuristicos criaPontos = new PontosTuristicos("Quedas do Iguaçu", "Verão");
-
-        Toast.makeText(this, "Selecionou destino9", Toast.LENGTH_SHORT).show();
-//        Intent it = new Intent(LocalActivity.this, actSobre.class);
-//        startActivity(it);
     }
 
 
