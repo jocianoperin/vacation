@@ -18,7 +18,7 @@ public class DetalhesActivity extends AppCompatActivity {
         Intent intent = getIntent();
         int id_destino = (int) intent.getSerializableExtra("destino_id");
 
-        TextView detalhesLocal = (TextView) findViewById(R.id.detalhes_local);
+        TextView detalhesLocal = (TextView) findViewById(R.id.detalhes_txt);
 
         if (id_destino == 0){
             detalhesLocal.setText(R.string.destino0);
@@ -40,6 +40,10 @@ public class DetalhesActivity extends AppCompatActivity {
             detalhesLocal.setText(R.string.destino8);
         }else if (id_destino == 9){
             detalhesLocal.setText(R.string.destino9);
+        }else if (id_destino == 10){
+            detalhesLocal.setText(R.string.destino10);
+        }else if (id_destino == 11){
+            detalhesLocal.setText(R.string.destino11);
         }
 
 

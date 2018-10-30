@@ -6,67 +6,53 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.DatePicker;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.util.Calendar;
 
 
-public class DataActivity extends Activity implements Button.OnClickListener {
-
-    private Button botao;
-    private Button botao2;
-    int month;
-
-    static final int DATE_DIALOG_ID = 0;
+public class DataActivity extends AppCompatActivity {
+    private String[] meses = new String[]{"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+    "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data);
-        botao = (Button) findViewById(R.id.btnDataInicio);
-        botao.setOnClickListener(this);
-    }
 
-    @Override
-    protected Dialog onCreateDialog(int id) {
-        Calendar calendario = Calendar.getInstance();
+        final Spinner combo = findViewById(R.id.comboMes);
 
-        int ano = calendario.get(Calendar.YEAR);
-        int mes = calendario.get(Calendar.MONTH);
-        int dia = calendario.get(Calendar.DAY_OF_MONTH);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+                android.R.layout.select_dialog_singlechoice, meses);
 
-        switch (id) {
-            case DATE_DIALOG_ID:
-                return new DatePickerDialog(this, mDateSetListener, ano, mes,
-                        dia);
-        }
-        return null;
-    }
+        combo.setAdapter(adapter);
 
-    private DatePickerDialog.OnDateSetListener mDateSetListener =
-            new DatePickerDialog.OnDateSetListener() {
-                public void onDateSet(DatePicker view, int year, int monthOfYear,
-                                      int dayOfMonth) {
-                    String data = String.valueOf(dayOfMonth) + " /"
-                            + String.valueOf(monthOfYear+1) + " /" + String.valueOf(year);
-                    Toast.makeText(DataActivity.this,
-                            "DATA = " + data, Toast.LENGTH_SHORT).show();
+        combo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int index, long l) {
+
+                switch (index){
+                    case 0:
+                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
+                                Toast.LENGTH_SHORT).show();
+                        break;
+                    case 1:
+                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
+                                Toast.LENGTH_SHORT).show();
+                        break;
                 }
-            };
+            }
 
-    @Override
-    public void onClick(View v) {
-        if (v == botao)
-            showDialog(DATE_DIALOG_ID);
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
     }
-
-    public void toLocal(View view) {
-
-        Intent intent = new Intent(this, LocalActivity.class);
-        startActivity(intent);
-    }
-
 }
