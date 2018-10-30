@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     public void toLocal(View view) {
 
         Intent intent = new Intent(this, LocalActivity.class);
+        intent.putExtra("id_estacao", 0);
         startActivity(intent);
     }
 

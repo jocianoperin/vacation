@@ -15,7 +15,7 @@ public class PontosTuristicos {
     //Outono: 21 março até 20 junho.
     //Inverno: 21 junho até 20 setembro.
 
-    public String converteMes(int mes) {
+    public String converteMes(int dia, int mes) {
         String estacao;
         if (mes >= 1 && mes <= 3) {
             estacao = "Verão";

@@ -26,57 +26,122 @@ public class LocalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_local);
 
+        Intent intent = getIntent();
+        final int id_estacao = (int) intent.getSerializableExtra("id_estacao");
+
         lvOpcoes = (ListView) findViewById(R.id.locais);
 
         opcoes = new ArrayList<String>();
 
-        opcoes.add("Destino0");
-        opcoes.add("Destino1");
-        opcoes.add("Destino2");
-        opcoes.add("Destino3");
-        opcoes.add("Destino4");
-        opcoes.add("Destino5");
-        opcoes.add("Destino6");
-        opcoes.add("Destino7");
-        opcoes.add("Destino8");
-        opcoes.add("Destino9");
+        if (id_estacao == 0){
+            opcoes.add("Destino0");
+            opcoes.add("Destino1");
+            opcoes.add("Destino2");
+            opcoes.add("Destino3");
+            opcoes.add("Destino4");
+            opcoes.add("Destino5");
+            opcoes.add("Destino6");
+            opcoes.add("Destino7");
+            opcoes.add("Destino8");
+            opcoes.add("Destino9");
+        }else if (id_estacao == 1){
+            opcoes.add("Destino0");
+            opcoes.add("Destino1");
+            opcoes.add("Destino2");
+        }else if (id_estacao == 2){
+            opcoes.add("Destino3");
+            opcoes.add("Destino4");
+            opcoes.add("Destino5");
+        }else if (id_estacao == 3){
+            opcoes.add("Destino6");
+            opcoes.add("Destino7");
+            opcoes.add("Destino8");
+        }else if (id_estacao == 4){
+            opcoes.add("Destino9");
+        }
+
+
 
         adaptador = new ArrayAdapter<String>(LocalActivity.this, android.R.layout.simple_list_item_1, opcoes);
         lvOpcoes.setAdapter(adaptador);
         lvOpcoes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position) {
-                    case 0:
-                        destino0();
-                        break;
-                    case 1:
-                        destino1();
-                        break;
-                    case 2:
-                        destino2();
-                        break;
-                    case 3:
-                        destino3();
-                        break;
-                    case 4:
-                        destino4();
-                        break;
-                    case 5:
-                        destino5();
-                        break;
-                    case 6:
-                        destino6();
-                        break;
-                    case 7:
-                        destino7();
-                        break;
-                    case 8:
-                        destino8();
-                        break;
-                    case 9:
-                        destino9();
-                        break;
+                if (id_estacao == 0){
+                    switch (position) {
+                        case 0:
+                            destino0();
+                            break;
+                        case 1:
+                            destino1();
+                            break;
+                        case 2:
+                            destino2();
+                            break;
+                        case 3:
+                            destino3();
+                            break;
+                        case 4:
+                            destino4();
+                            break;
+                        case 5:
+                            destino5();
+                            break;
+                        case 6:
+                            destino6();
+                            break;
+                        case 7:
+                            destino7();
+                            break;
+                        case 8:
+                            destino8();
+                            break;
+                        case 9:
+                            destino9();
+                            break;
+                    }
+                }else if (id_estacao == 1){
+                    switch (position){
+                        case 0:
+                            destino0();
+                            break;
+                        case 1:
+                            destino1();
+                            break;
+                        case 2:
+                            destino2();
+                            break;
+                    }
+                }else if (id_estacao == 2){
+                    switch (position){
+                        case 0:
+                            destino3();
+                            break;
+                        case 1:
+                            destino4();
+                            break;
+                        case 2:
+                            destino5();
+                            break;
+                    }
+                }else if (id_estacao == 3){
+                    switch (position){
+                        case 0:
+                            destino6();
+                            break;
+                        case 1:
+                            destino7();
+                            break;
+                        case 2:
+                            destino8();
+                            break;
+                    }
+                }else if (id_estacao == 4){
+                    switch (position){
+                        case 0:
+                            destino9();
+                            break;
+                    }
                 }
             }
         });

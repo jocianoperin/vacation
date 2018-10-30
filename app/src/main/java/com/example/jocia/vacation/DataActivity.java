@@ -45,8 +45,6 @@ public class DataActivity extends Activity implements Button.OnClickListener {
                         dia);
         }
 
-
-
         return null;
     }
 
@@ -58,18 +56,74 @@ public class DataActivity extends Activity implements Button.OnClickListener {
                             + String.valueOf(monthOfYear+1) + " /" + String.valueOf(year);
                     Toast.makeText(DataActivity.this,
                             "DATA = " + data, Toast.LENGTH_SHORT).show();
+                    int estacao = converteMes(monthOfYear);
+                    if (estacao == 1){
+                        estacao1();
+                    }else if (estacao == 2){
+                        estacao2();
+                    }else if (estacao == 3){
+                        estacao3();
+                    }else if (estacao == 4){
+                        estacao4();
+                    }
+
                 }
             };
 
     @Override
     public void onClick(View v) {
-        if (v == botao)
+        if (v == botao){
             showDialog(DATE_DIALOG_ID);
+        }
     }
 
     public void toLocal(View view) {
 
         Intent intent = new Intent(this, LocalActivity.class);
+        intent.putExtra("id_estacao", 0);
+        startActivity(intent);
+    }
+
+    public int converteMes(int mes) {
+        int estacao;
+        if (mes >= 1 && mes <= 3) {
+            //verao
+            estacao = 2;
+            return estacao;
+        } else if (mes >= 4 && mes <= 6) {
+            //outono
+            estacao = 3;
+            return estacao;
+        } else if (mes >= 7 && mes <= 9) {
+            //inverno
+            estacao = 4;
+            return estacao;
+        } else if (mes >= 10 && mes <= 12) {
+            //primavera
+            estacao = 1;
+            return estacao;
+        }
+        return 0;
+    }
+
+    private void estacao1() {
+        Intent intent = new Intent(this, LocalActivity.class);
+        intent.putExtra("id_estacao", 1);
+        startActivity(intent);
+    }
+    private void estacao2() {
+        Intent intent = new Intent(this, LocalActivity.class);
+        intent.putExtra("id_estacao", 2);
+        startActivity(intent);
+    }
+    private void estacao3() {
+        Intent intent = new Intent(this, LocalActivity.class);
+        intent.putExtra("id_estacao", 3);
+        startActivity(intent);
+    }
+    private void estacao4() {
+        Intent intent = new Intent(this, LocalActivity.class);
+        intent.putExtra("id_estacao", 4);
         startActivity(intent);
     }
 
