@@ -34,9 +34,9 @@ public class LocalActivity extends AppCompatActivity {
         opcoes = new ArrayList<String>();
 
         if (id_estacao == 0){
-            opcoes.add("Destino0");
-            opcoes.add("Destino1");
-            opcoes.add("Destino2");
+            opcoes.add("Holambra (SP) – Expoflora e plantações");
+            opcoes.add("Cunha (SP) – Lavandário");
+            opcoes.add("Nova Petrópolis (RS) – Festival da Primavera");
             opcoes.add("Destino3");
             opcoes.add("Destino4");
             opcoes.add("Destino5");
@@ -45,9 +45,9 @@ public class LocalActivity extends AppCompatActivity {
             opcoes.add("Destino8");
             opcoes.add("Destino9");
         }else if (id_estacao == 1){
-            opcoes.add("Destino0");
-            opcoes.add("Destino1");
-            opcoes.add("Destino2");
+            opcoes.add("Holambra (SP) – Expoflora e plantações");
+            opcoes.add("Cunha (SP) – Lavandário");
+            opcoes.add("Nova Petrópolis (RS) – Festival da Primavera");
         }else if (id_estacao == 2){
             opcoes.add("Destino3");
             opcoes.add("Destino4");

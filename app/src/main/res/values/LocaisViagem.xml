@@ -1,18 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--Primavera-->
-    <string name="destino0">TEXTO DO DESTINO 0</string>
-    <string name="destino1">TEXTO DO DESTINO 1</string>
-    <string name="destino2">TEXTO DO DESTINO 2</string>
-    <!--Verao-->
+    <!--Primavera ................................. -->
+    <!--Holambra (SP) – Expoflora e plantações-->
+    <string name="destino0"><b>     Se existem algumas cidades brasileiras que fazem você se sentir na Europa,
+        uma delas é Holambra, conhecida como Capital Nacional das Flores. Se no nome já se percebe a semelhança com a Holanda,
+        espere para ver os moinhos, as casas coloridas, bicicletas e flores por todos os lados.</b>
+        <b>     Uma das melhores épocas para conhecer a Holambra é na primavera, quando as ruas ficam floridas, as plantações ficam
+            ainda mais vistosas, e a cidade se torna palco da Expoflora, a maior exposição de flores e plantas ornamentais da
+            América Latina. Em 2018, o evento ocorre até 24 de setembro – ainda dá tempo de conhecer!</b>
+        <b>     Holambra é um ótimo passeio para um final de semana saindo de São Paulo, pois basta pegar a estrada e percorrer
+            os 130km que separam esse doce de cidade da correria da capital paulista.</b>
+    </string>
+
+    <!--Cunha (SP) – Lavandário-->
+    <string name="destino1"><b>     Mais um destino florido para a nossa lista: Cunha. Entre as montanhas da Serra do Mar e da Serra
+        da Bocaina, a cidade dos ceramistas tem uma natureza privilegiada, onde é possível passear por plantações de lavanda
+        e praticar ecoturismo.</b>
+        <b>     O lavandário é florido durante todo o ano, e você pode escolher qual tipo de visitação combina mais com o seu
+            estilo: fazer um tour pela plantação, vivenciar a colheita de flores, fotografar os campos floridos, fazer massagens
+            relaxantes com óleos de lavanda ou ainda provar cosméticos e alimentos feitos com a planta.</b>
+        <b>     Perfeito destino para visitar no inverno, Cunha é indicada também para uma viagem romântica, ideal para quem
+            vem de carro de São Paulo (223km) ou do Rio de Janeiro (306km).</b>
+    </string>
+
+    <!--Nova Petrópolis (RS) – Festival da Primavera-->
+    <string name="destino2"><b>Nova Petrópolis, na Serra Gaúcha, não poderia ficar de fora dessa lista. Mantendo uma tradição
+        alemã, no mês de setembro a cidade comemora a Frühlingsfest, a Festa da Primavera (este ano será de 20 a 30 de setembro).</b>
+        <b>Já na subida da serra é possível notar a mudança de paisagem: a cada curva mais e mais hortênsias tomam conta da estrada, como se
+            fossem nuvens azuis dos mais variados tons.</b>
+        <b>Gramado também é muito bonita nessa época, mas vale a pena fugir um pouco do burburinho turístico e se hospedar em
+            Nova Petrópolis por alguns dias. O centro da cidade tem muitos canteiros floridos, assim com a praça principal,
+            e o clima de cidade do interior é fascinante.</b>
+    </string>
+
+
+    <!--Verao ...................................... -->
     <string name="destino3">TEXTO DO DESTINO 3</string>
     <string name="destino4">TEXTO DO DESTINO 4</string>
     <string name="destino5">TEXTO DO DESTINO 5</string>
-    <!--Outono-->
+    <!--Outono ..................................... -->
     <string name="destino6">TEXTO DO DESTINO 6</string>
     <string name="destino7">TEXTO DO DESTINO 7</string>
     <string name="destino8">TEXTO DO DESTINO 8</string>
-    <!--Inverno-->
+    <!--Inverno ....................................... -->
     <string name="destino9">TEXTO DO DESTINO 9</string>
 
 
