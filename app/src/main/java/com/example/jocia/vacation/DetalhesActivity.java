@@ -3,6 +3,7 @@ package com.example.jocia.vacation;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -19,9 +20,11 @@ public class DetalhesActivity extends AppCompatActivity {
         int id_destino = (int) intent.getSerializableExtra("destino_id");
 
         TextView detalhesLocal = (TextView) findViewById(R.id.detalhes_txt);
+        ImageView imagemLocal = findViewById(R.id.img_local);
 
         if (id_destino == 0){
             detalhesLocal.setText(R.string.destino0);
+            imagemLocal.setImageResource(R.mipmap.holambra);
         }else if (id_destino == 1){
             detalhesLocal.setText(R.string.destino1);
         }else if (id_destino == 2){
