@@ -1,118 +1,72 @@
 package com.example.jocia.vacation;
 
+
+import android.app.Activity;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
+import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.Toast;
 
-public class DataActivity extends AppCompatActivity {
+import java.util.Calendar;
 
-    private String[] meses = new String[]{"Janeiro", "Fevereiro", "Março", "Abril", "Maio",
-            "Junho", "Julho", "Agosto", "Setembrp", "Outubro", "Novembro", "Dezembro"};
 
-    int estacao;
-//      estacões:
-//      1: verão;
-//      2: outono
-//      3: inverno
-//      4: primavera
+public class DataActivity extends Activity implements Button.OnClickListener {
+
+    private Button botao;
+    private Button botao2;
+    int month;
+
+    static final int DATE_DIALOG_ID = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data);
+        botao = (Button) findViewById(R.id.btnDataInicio);
+        botao.setOnClickListener(this);
+    }
 
-        final Spinner combo = findViewById(R.id.comboMes);
+    @Override
+    protected Dialog onCreateDialog(int id) {
+        Calendar calendario = Calendar.getInstance();
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                android.R.layout.select_dialog_singlechoice, meses);
+        int ano = calendario.get(Calendar.YEAR);
+        int mes = calendario.get(Calendar.MONTH);
+        int dia = calendario.get(Calendar.DAY_OF_MONTH);
 
-        combo.setAdapter(adapter);
+        switch (id) {
+            case DATE_DIALOG_ID:
+                return new DatePickerDialog(this, mDateSetListener, ano, mes,
+                        dia);
+        }
+        return null;
+    }
 
-        combo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int index, long l) {
-
-                switch (index){
-                    case 0:
-                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
-                                Toast.LENGTH_SHORT).show();
-                        estacao = 1;
-                        break;
-                    case 1:
-                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
-                                Toast.LENGTH_SHORT).show();
-                        estacao = 1;
-                        break;
-                    case 2:
-                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
-                                Toast.LENGTH_SHORT).show();
-                        estacao = 1;
-                        break;
-                    case 3:
-                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
-                                Toast.LENGTH_SHORT).show();
-                        estacao = 2;
-                        break;
-                    case 4:
-                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
-                                Toast.LENGTH_SHORT).show();
-                        estacao = 2;
-                        break;
-                    case 5:
-                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
-                                Toast.LENGTH_SHORT).show();
-                        estacao = 2;
-                        break;
-                    case 6:
-                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
-                                Toast.LENGTH_SHORT).show();
-                        estacao = 3;
-                        break;
-                    case 7:
-                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
-                                Toast.LENGTH_SHORT).show();
-                        estacao = 3;
-                        break;
-                    case 8:
-                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
-                                Toast.LENGTH_SHORT).show();
-                        estacao = 3;
-                        break;
-                    case 9:
-                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
-                                Toast.LENGTH_SHORT).show();
-                        estacao = 4;
-                        break;
-                    case 10:
-                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
-                                Toast.LENGTH_SHORT).show();
-                        estacao = 4;
-                        break;
-                    case 11:
-                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
-                                Toast.LENGTH_SHORT).show();
-                        estacao = 4;
-                        break;
+    private DatePickerDialog.OnDateSetListener mDateSetListener =
+            new DatePickerDialog.OnDateSetListener() {
+                public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                      int dayOfMonth) {
+                    String data = String.valueOf(dayOfMonth) + " /"
+                            + String.valueOf(monthOfYear+1) + " /" + String.valueOf(year);
+                    Toast.makeText(DataActivity.this,
+                            "DATA = " + data, Toast.LENGTH_SHORT).show();
                 }
-            }
+            };
 
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-                Toast.makeText(DataActivity.this, "Nenhum mês selecionado",
-                        Toast.LENGTH_SHORT).show();
-                estacao = 0;
-            }
-        });
+    @Override
+    public void onClick(View v) {
+        if (v == botao)
+            showDialog(DATE_DIALOG_ID);
     }
 
     public void toLocal(View view) {
+
         Intent intent = new Intent(this, LocalActivity.class);
-        intent.putExtra("estacao", estacao);
         startActivity(intent);
     }
+
 }
