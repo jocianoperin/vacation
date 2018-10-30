@@ -18,6 +18,9 @@ import java.util.Calendar;
 
 
 public class DataActivity extends AppCompatActivity {
+
+    int estacao = 0;
+
     private String[] meses = new String[]{"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
     "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
 
@@ -41,18 +44,78 @@ public class DataActivity extends AppCompatActivity {
                     case 0:
                         Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
                                 Toast.LENGTH_SHORT).show();
+                        estacao = 1;
                         break;
                     case 1:
                         Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
                                 Toast.LENGTH_SHORT).show();
+                        estacao = 1;
+                        break;
+                    case 2:
+                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
+                                Toast.LENGTH_SHORT).show();
+                        estacao = 1;
+                        break;
+                    case 3:
+                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
+                                Toast.LENGTH_SHORT).show();
+                        estacao = 2;
+                        break;
+                    case 4:
+                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
+                                Toast.LENGTH_SHORT).show();
+                        estacao = 2;
+                        break;
+                    case 5:
+                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
+                                Toast.LENGTH_SHORT).show();
+                        estacao = 2;
+                        break;
+                    case 6:
+                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
+                                Toast.LENGTH_SHORT).show();
+                        estacao = 3;
+                        break;
+                    case 7:
+                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
+                                Toast.LENGTH_SHORT).show();
+                        estacao = 3;
+                        break;
+                    case 8:
+                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
+                                Toast.LENGTH_SHORT).show();
+                        estacao = 3;
+                        break;
+                    case 9:
+                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
+                                Toast.LENGTH_SHORT).show();
+                        estacao = 4;
+                        break;
+                    case 10:
+                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
+                                Toast.LENGTH_SHORT).show();
+                        estacao = 4;
+                        break;
+                    case 11:
+                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
+                                Toast.LENGTH_SHORT).show();
+                        estacao = 4;
                         break;
                 }
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                Toast.makeText(DataActivity.this, "Nenhum mês selecionado",
+                        Toast.LENGTH_SHORT).show();
+                estacao = 0;
             }
         });
+    }
+    public void toLocal(View view) {
+
+        Intent intent = new Intent(this, LocalActivity.class);
+        intent.putExtra("estacao", estacao);
+        startActivity(intent);
     }
 }

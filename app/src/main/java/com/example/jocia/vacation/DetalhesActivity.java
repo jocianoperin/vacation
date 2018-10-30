@@ -1,8 +1,11 @@
 package com.example.jocia.vacation;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -16,9 +19,10 @@ public class DetalhesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detalhes);
 
         Intent intent = getIntent();
-        int id_destino = (int) intent.getSerializableExtra("destino_id");
+        int id_destino = intent.getExtras().getInt("destino", 0);
 
         TextView detalhesLocal = (TextView) findViewById(R.id.detalhes_txt);
+        ImageView imageView = (ImageView) findViewById(R.id.detalhes_img);
 
         if (id_destino == 0){
             detalhesLocal.setText(R.string.destino0);

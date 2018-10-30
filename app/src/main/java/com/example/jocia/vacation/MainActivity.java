@@ -7,8 +7,6 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-    int estacao = 0;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     public void toLocal(View view) {
 
         Intent intent = new Intent(this, LocalActivity.class);
-        intent.putExtra("estacao", estacao);
+        intent.putExtra("estacao", 0);
         startActivity(intent);
     }
 
