@@ -82,31 +82,6 @@ public class LocalActivity extends AppCompatActivity {
             });
 
         }else if (estacao == 3){
-            opcoes.add("Toscana");
-            opcoes.add("Praga");
-            opcoes.add("Hallstatt");
-
-            adaptador = new ArrayAdapter<String>(LocalActivity.this, android.R.layout.simple_list_item_1, opcoes);
-            lvOpcoes.setAdapter(adaptador);
-
-            lvOpcoes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    switch (position) {
-                        case 0:
-                            destino(6);
-                            break;
-                        case 1:
-                            destino(7);
-                            break;
-                        case 2:
-                            destino(8);
-                            break;
-                    }
-                }
-            });
-
-        }else if (estacao == 4){
             opcoes.add("Bariloche");
             opcoes.add("Mendoza");
             opcoes.add("Santiago");
@@ -126,6 +101,31 @@ public class LocalActivity extends AppCompatActivity {
                             break;
                         case 2:
                             destino(11);
+                            break;
+                    }
+                }
+            });
+
+        }else if (estacao == 4){
+            opcoes.add("Toscana");
+            opcoes.add("Praga");
+            opcoes.add("Hallstatt");
+
+            adaptador = new ArrayAdapter<String>(LocalActivity.this, android.R.layout.simple_list_item_1, opcoes);
+            lvOpcoes.setAdapter(adaptador);
+
+            lvOpcoes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    switch (position) {
+                        case 0:
+                            destino(6);
+                            break;
+                        case 1:
+                            destino(7);
+                            break;
+                        case 2:
+                            destino(8);
                             break;
                     }
                 }

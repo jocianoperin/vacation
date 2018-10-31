@@ -19,9 +19,9 @@ import java.util.Calendar;
 
 public class DataActivity extends AppCompatActivity {
 
-    int estacao = 0;
+    int estacao;
 
-    private String[] meses = new String[]{"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+    private String[] meses = new String[]{"","Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
     "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
 
     @Override
@@ -32,7 +32,7 @@ public class DataActivity extends AppCompatActivity {
         final Spinner combo = findViewById(R.id.comboMes);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                android.R.layout.select_dialog_singlechoice, meses);
+                android.R.layout.select_dialog_item, meses);
 
         combo.setAdapter(adapter);
 
@@ -42,9 +42,9 @@ public class DataActivity extends AppCompatActivity {
 
                 switch (index){
                     case 0:
-                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
+                        Toast.makeText(DataActivity.this, "Nenhum local selecionado",
                                 Toast.LENGTH_SHORT).show();
-                        estacao = 1;
+                        estacao = 0;
                         break;
                     case 1:
                         Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
@@ -59,7 +59,7 @@ public class DataActivity extends AppCompatActivity {
                     case 3:
                         Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
                                 Toast.LENGTH_SHORT).show();
-                        estacao = 2;
+                        estacao = 1;
                         break;
                     case 4:
                         Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
@@ -74,7 +74,7 @@ public class DataActivity extends AppCompatActivity {
                     case 6:
                         Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
                                 Toast.LENGTH_SHORT).show();
-                        estacao = 3;
+                        estacao = 2;
                         break;
                     case 7:
                         Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
@@ -89,7 +89,7 @@ public class DataActivity extends AppCompatActivity {
                     case 9:
                         Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
                                 Toast.LENGTH_SHORT).show();
-                        estacao = 4;
+                        estacao = 3;
                         break;
                     case 10:
                         Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
@@ -97,6 +97,11 @@ public class DataActivity extends AppCompatActivity {
                         estacao = 4;
                         break;
                     case 11:
+                        Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
+                                Toast.LENGTH_SHORT).show();
+                        estacao = 4;
+                        break;
+                    case 12:
                         Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
                                 Toast.LENGTH_SHORT).show();
                         estacao = 4;
@@ -112,6 +117,8 @@ public class DataActivity extends AppCompatActivity {
             }
         });
     }
+
+
     public void toLocal(View view) {
 
         Intent intent = new Intent(this, LocalActivity.class);

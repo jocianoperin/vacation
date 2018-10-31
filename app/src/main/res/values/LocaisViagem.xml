@@ -1,102 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="destino0">
-        Porto de Galinhas, PE
+        Porto de Galinhas, PE\n \n
         Um buggy faz o passeio Ponta a Ponta, conhecendo a enseada da região, com destaque para
         Muro Alto e Pontal do Cupe. Uma jangada, com a maré baixa, leva os turistas até as
         Piscinas Naturais de Porto de Galinhas, com muitos peixinhos. E se você estiver motorizado
         ou se alugar um carro em Porto de Galinhas, a estrada o levará rumo à linda Praia de
         Carneiros ou às Piscinas Naturais de Maragogi, em Alagoas — aliás, este roteiro entre
-        Pernambuco e Alagoas passa por praias lindas.
+        Pernambuco e Alagoas passa por praias lindas. \n\n
+        Melhor mês do ano: Janeiro
     </string>
 
     <string name="destino1">
-        Morro de São Paulo, BA
+        Morro de São Paulo, BA\n\n
         Chegar na ilha demora cerca de 2 horas, com travessia de balsa saindo de Salvador,
         mas vale a pena.
         Os destaques são o snorkeling na Terceira e na Quarta praias, a estrutura de barracas na
         Segunda e o Mirante da Tirolesa, de onde é possível descer por uma tirolesa de mais de
-        300 metros de altura até o mar.
+        300 metros de altura até o mar.\n\n
+        Melhor mês do ano: Janeiro
     </string>
 
     <string name="destino2">
-        Natal, RN
+        Natal, RN\n\n
         Fazer passeio de buggy pelas dunas, visitar as salinas em Galinhos e nadar no “Mar Morto
         Brasileiro”, jantar no Camarões… Estas são apenas algumas das principais atrações de Natal,
-        um dos destinos mais buscados aqui no Skyscanner.
+        um dos destinos mais buscados aqui no Skyscanner.\n\n
+        Melhor mês do ano: Janeiro
     </string>
 
     <string name="destino3">
-        Joinville (SC) – Campos floridos e  Festa das Flores
+        Joinville (SC) – Campos floridos e  Festa das Flores\n\n
         Uma das principais produtoras de flores do Brasil, Joinville se destaca pelo cultivo de
         orquídeas e plantas ornamentais. A festa por aqui não é no início da primavera, mas em
-        novembro, quando a cidade sedia a Festa das Flores.
+        novembro, quando a cidade sedia a Festa das Flores.\n\n
+        Melhor mês do ano: Dezembro
     </string>
 
     <string name="destino4">
-        Holambra (SP) – Expoflora e plantações
+        Holambra (SP) – Expoflora e plantações\n\n
         Se existem algumas cidades brasileiras que fazem você se sentir na Europa, uma delas é
         Holambra, conhecida como Capital Nacional das Flores. Se no nome já se percebe a semelhança
         com a Holanda, espere para ver os moinhos, as casas coloridas, bicicletas e flores
-        por todos os lados.
+        por todos os lados.\n\n
+        Melhor mês do ano: Dezembro
     </string>
 
     <string name="destino5">
-        Cunha (SP) – Lavandário
+        Cunha (SP) – Lavandário\n\n
         Mais um destino florido para a nossa lista: Cunha. Entre as montanhas da Serra do Mar e
         da Serra da Bocaina, a cidade dos ceramistas tem uma natureza privilegiada, onde é possível
-        passear por plantações de lavanda e praticar ecoturismo.
+        passear por plantações de lavanda e praticar ecoturismo.\n\n
+        Melhor mês do ano: Dezembro
     </string>
 
     <string name="destino6">
-        Toscana, Itália
+        Toscana, Itália \n\n
         O belo outono na Toscana começa na última semana de setembro. Existem muitas razões para
         visitar esta bela região no outono, mas os principais são: os festivais gastronómicos
         (o vinho, as trufas, os cogumelos frescos), o clima luxuoso e os vinhedos coloridos.
-        Aproveite para fazer uma road trip e descubra esta região apaixonante.
+        Aproveite para fazer uma road trip e descubra esta região apaixonante. \n\n
+        Melhor mês do ano: Abril
     </string>
 
     <string name="destino7">
-        Praga, República Checa
+        Praga, República Checa\n\n
         São muitas as vantagens de visitar Praga no outono. A cidade não está lotada de turistas
         curiosos e torna-se mais agradável passear pelas suas ruas românticas. Admire a forma como
         o sol ilumina os edifícios antigos e as folhas se transformam em cor de mel, framboesa e
         açafrão. A melhor época para visitar Praga, no outono, é na segunda quinzena de
-        setembro/início de outubro, quando o tempo quente ainda se faz sentir.
+        setembro/início de outubro, quando o tempo quente ainda se faz sentir.\n\n
+        Melhor mês do ano: Abril
     </string>
 
     <string name="destino8">
-        Hallstatt, Áustria
+        Hallstatt, Áustria\n\n
         Aninhada nos Alpes austríacos, na margem de um lago, existe uma cidade muito pitoresca
         chamada Hallstatt. A melhor época para a visitar é em outubro, pois quase não há turistas.
         Aqui encontra pequenas ruas com casas coloridas, restaurantes acolhedores e uma paleta de
         cores brilhantes de outono. Aproveite para visitar a Mina de Sal mais antiga do mundo,
-        Salzwelten.
+        Salzwelten.\n\n
+        Melhor mês do ano: Abril
     </string>
 
     <string name="destino9">
-        Bariloche – Argentina
+        Bariloche – Argentina\n\n
         Bariloche é o primeiro destino a ser lembrado para as férias de julho por quem quer ver
         neve e esquiar. Suas estações de esqui estão entre as mais famosas de toda a América do
         Sul e podem ser aproveitadas tanto por iniciantes quanto por esquiadores mais experientes.
         Dentre as principais, a de maior destaque é a Cerro Catedral, onde é possível alugar os
-        equipamentos e participar de outras atividades, muitas delas voltadas para o público infantil.
+        equipamentos e participar de outras atividades, muitas delas voltadas para o público infantil.\n\n
+        Melhor mês do ano: Julho
     </string>
 
     <string name="destino10">
-        Mendoza – Argentina
+        Mendoza – Argentina\n\n
         Na província de Mendonza, também há cenários que têm sua beleza intensificada pelo branco
         da neve. Para esquiar, a estação Las Leñas é a mais famosa, sendo também a mais alta da
-        Argentina, ultrapassando os 3 mil metros de altitude.
+        Argentina, ultrapassando os 3 mil metros de altitude.\n\n
+        Melhor mês do ano: Julho
     </string>
 
     <string name="destino11">
-        Santiago – Chile
+        Santiago – Chile\n\n
         No Chile, ao contrário do que acontece na Argentina, não é preciso se distanciar muito da
         capital nacional para ver neve. Isso porque as principais estações de esqui chilenas ficam
         nos arredores de Santiago. Valle Nevado, por exemplo, está a 60 km de distância da capital,
         enquanto El Colorado está ainda mais perto, em uma viagem que percorre menos de
-        40 km de estrada.
+        40 km de estrada.\n\n
+        Melhor mês do ano: Julho
     </string>
 
 </resources>
