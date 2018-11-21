@@ -19,6 +19,7 @@ import android.os.Bundle;
 public class ExibeLocal extends AppCompatActivity {
 
     private ListView lista;
+    private String estacao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,25 +38,36 @@ public class ExibeLocal extends AppCompatActivity {
         lista = findViewById(R.id.lvToDoList);
         lista.setAdapter(adapter);
 
-        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        if (estacao == "Verão") {
 
-                String codigo = "";
-                cursor.moveToPosition(i);
+        } else if (estacao == "Primavera") {
 
-                codigo = cursor.getString(cursor.getColumnIndexOrThrow(CriaBanco.ID));
+        } else if (estacao == "Outuno") {
 
-                Intent intent = new Intent(getBaseContext(), CadastrarLocal.class);
+        } else if (estacao == "Inverno") {
 
-                Bundle params = new Bundle();
-                params.putString("codigo", codigo);
+        } else {
 
-                intent.putExtras(params);
+            lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                startActivity(intent);
-            }
-        });
+                    String codigo = "";
+                    cursor.moveToPosition(i);
+
+                    codigo = cursor.getString(cursor.getColumnIndexOrThrow(CriaBanco.ID));
+
+                    Intent intent = new Intent(getBaseContext(), CadastrarLocal.class);
+
+                    Bundle params = new Bundle();
+                    params.putString("codigo", codigo);
+
+                    intent.putExtras(params);
+
+                    startActivity(intent);
+                }
+            });
+        }
     }
 
     public void onClickAdd(View view) {

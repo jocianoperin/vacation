@@ -15,7 +15,7 @@ import com.example.jocia.vacation.R;
 
 public class DataActivity extends AppCompatActivity {
 
-    int estacao;
+    private String estacao;
 
     private String[] meses = new String[]{"","Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
     "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
@@ -40,67 +40,67 @@ public class DataActivity extends AppCompatActivity {
                     case 0:
                         Toast.makeText(DataActivity.this, "Nenhum local selecionado",
                                 Toast.LENGTH_SHORT).show();
-                        estacao = 0;
+                        estacao = "";
                         break;
                     case 1:
                         Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
                                 Toast.LENGTH_SHORT).show();
-                        estacao = 1;
+                        estacao = "Verão";
                         break;
                     case 2:
                         Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
                                 Toast.LENGTH_SHORT).show();
-                        estacao = 1;
+                        estacao = "Verão";
                         break;
                     case 3:
                         Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
                                 Toast.LENGTH_SHORT).show();
-                        estacao = 1;
+                        estacao = "Verão";
                         break;
                     case 4:
                         Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
                                 Toast.LENGTH_SHORT).show();
-                        estacao = 2;
+                        estacao = "Outono";
                         break;
                     case 5:
                         Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
                                 Toast.LENGTH_SHORT).show();
-                        estacao = 2;
+                        estacao = "Outono";
                         break;
                     case 6:
                         Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
                                 Toast.LENGTH_SHORT).show();
-                        estacao = 2;
+                        estacao = "Outono";
                         break;
                     case 7:
                         Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
                                 Toast.LENGTH_SHORT).show();
-                        estacao = 3;
+                        estacao = "Inverno";
                         break;
                     case 8:
                         Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
                                 Toast.LENGTH_SHORT).show();
-                        estacao = 3;
+                        estacao = "Inverno";
                         break;
                     case 9:
                         Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
                                 Toast.LENGTH_SHORT).show();
-                        estacao = 3;
+                        estacao = "Inverno";
                         break;
                     case 10:
                         Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
                                 Toast.LENGTH_SHORT).show();
-                        estacao = 4;
+                        estacao = "Primavera";
                         break;
                     case 11:
                         Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
                                 Toast.LENGTH_SHORT).show();
-                        estacao = 4;
+                        estacao = "Primavera";
                         break;
                     case 12:
                         Toast.makeText(DataActivity.this, adapterView.getSelectedItem().toString(),
                                 Toast.LENGTH_SHORT).show();
-                        estacao = 4;
+                        estacao = "Primavera";
                         break;
                 }
             }
@@ -109,7 +109,7 @@ public class DataActivity extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> adapterView) {
                 Toast.makeText(DataActivity.this, "Nenhum mês selecionado",
                         Toast.LENGTH_SHORT).show();
-                estacao = 0;
+                estacao = "";
             }
         });
     }
