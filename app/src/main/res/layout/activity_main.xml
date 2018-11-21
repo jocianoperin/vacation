@@ -19,7 +19,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Selecione como você quer filtrar"
+        android:text="Selecione a opção desejada"
         android:layout_gravity="center"/>
 
     <LinearLayout
@@ -37,8 +37,8 @@
             android:id="@+id/btnLocal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/Local"
-            android:onClick="toLocal"/>
+            android:text="@string/Cadastrar"
+            android:onClick="toCadastrar"/>
 
         <TextView
             android:layout_weight="1"
@@ -51,8 +51,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:onClick="toData"
-            android:text="@string/Data" />
+            android:onClick="toBuscar"
+            android:text="@string/Buscar" />
 
         <TextView
             android:layout_weight="1"

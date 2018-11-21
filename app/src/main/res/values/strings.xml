@@ -12,4 +12,9 @@
     <string name="txtSelecioneMês">Selecione o mês das férias</string>
     <string name="btnBuscaLocais">Buscar locais</string>
     <string name="detalhes_txt">Detalhes</string>
+    <string name="Cadastrar">Cadastrar</string>
+    <string name="Buscar">Buscar</string>
+    <string name="descricao">Descrição</string>
+    <string name="estacao">Estação</string>
+    <string name="cadastrar">Cadastrar</string>
 </resources>

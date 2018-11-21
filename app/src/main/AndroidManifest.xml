@@ -18,7 +18,9 @@
         </activity>
         <activity android:name=".LocalActivity" />
         <activity android:name=".DataActivity" />
-        <activity android:name=".DetalhesActivity"></activity>
+        <activity android:name=".DetalhesActivity" />
+        <activity android:name=".CadastrarLocal" />
+        <activity android:name=".ExibeLocal"></activity>
     </application>
 
 </manifest>

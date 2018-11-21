@@ -7,7 +7,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
+
+import com.example.jocia.vacation.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -203,7 +204,6 @@ public class LocalActivity extends AppCompatActivity {
         intent.putExtra("destino", destino);
         startActivity(intent);
     }
-
 
 }
 

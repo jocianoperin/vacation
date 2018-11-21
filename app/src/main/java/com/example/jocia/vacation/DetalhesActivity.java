@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.jocia.vacation.R;
+
 
 public class DetalhesActivity extends AppCompatActivity {
 

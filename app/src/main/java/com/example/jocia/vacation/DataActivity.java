@@ -1,20 +1,16 @@
 package com.example.jocia.vacation;
 
 
-import android.app.Activity;
-import android.app.DatePickerDialog;
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
-
-import java.util.Calendar;
+import com.example.jocia.vacation.R;
+import com.example.jocia.vacation.R;
 
 
 public class DataActivity extends AppCompatActivity {

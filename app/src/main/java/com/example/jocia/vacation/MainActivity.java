@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.jocia.vacation.R;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -13,14 +15,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void toLocal(View view) {
+    public void toCadastrar(View view) {
 
-        Intent intent = new Intent(this, LocalActivity.class);
-        intent.putExtra("estacao", 0);
+        Intent intent = new Intent(this, CadastrarLocal.class);
         startActivity(intent);
     }
 
-    public void toData(View view) {
+    public void toBuscar(View view) {
 
         Intent intent = new Intent(this, DataActivity.class);
         startActivity(intent);
