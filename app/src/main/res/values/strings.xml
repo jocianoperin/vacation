@@ -17,4 +17,6 @@
     <string name="descricao">Descrição</string>
     <string name="estacao">Estação</string>
     <string name="cadastrar">Cadastrar</string>
+    <string name="Excluir">Excluir</string>
+    <string name="Listar">Listar</string>
 </resources>

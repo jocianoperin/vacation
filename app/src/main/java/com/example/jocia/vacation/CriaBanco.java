@@ -31,6 +31,18 @@ public class CriaBanco extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(sql);
     }
 
+    public void onPopula(SQLiteDatabase sqLiteDatabase) {
+
+        String sql = "CREATE TABLE " + TABELA + "("
+                + ID + " integer primary key autoincrement,"
+                + LOCAL + " text,"
+                + DESCRICAO + " text,"
+                + ESTACAO + " text"
+                + ")";
+
+        sqLiteDatabase.execSQL(sql);
+    }
+
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 

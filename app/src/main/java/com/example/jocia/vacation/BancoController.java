@@ -39,7 +39,7 @@ public class BancoController {
 
         Cursor cursor;
 
-        String[] campos = {banco.ID, banco.LOCAL};
+        String[] campos = {banco.ID, banco.LOCAL, banco.ESTACAO};
 
         db = banco.getReadableDatabase();
         cursor = db.query(banco.TABELA, campos, null, null, null, null, banco.ID);

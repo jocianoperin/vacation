@@ -19,7 +19,6 @@ import android.os.Bundle;
 public class ExibeLocal extends AppCompatActivity {
 
     private ListView lista;
-    private String estacao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +29,7 @@ public class ExibeLocal extends AppCompatActivity {
         final Cursor cursor = bancoController.carregaDados();
 
         String[] nomeCampos = new String[]{CriaBanco.ID, CriaBanco.LOCAL};
-        int[] idViews = new int[]{R.id.idLocal, R.id.tituloLocal};
+        int[] idViews = new int[]{R.id.tituloLocal, R.id.estacaoLocal};
 
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(getBaseContext(), R.layout.list_local_adapter, cursor,
                 nomeCampos, idViews, 0);
@@ -38,36 +37,27 @@ public class ExibeLocal extends AppCompatActivity {
         lista = findViewById(R.id.lvToDoList);
         lista.setAdapter(adapter);
 
-        if (estacao == "Verão") {
 
-        } else if (estacao == "Primavera") {
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-        } else if (estacao == "Outuno") {
+                String codigo = "";
+                cursor.moveToPosition(i);
 
-        } else if (estacao == "Inverno") {
+                codigo = cursor.getString(cursor.getColumnIndexOrThrow(CriaBanco.ID));
 
-        } else {
+                Intent intent = new Intent(getBaseContext(), CadastrarLocal.class);
 
-            lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Bundle params = new Bundle();
+                params.putString("codigo", codigo);
 
-                    String codigo = "";
-                    cursor.moveToPosition(i);
+                intent.putExtras(params);
 
-                    codigo = cursor.getString(cursor.getColumnIndexOrThrow(CriaBanco.ID));
+                startActivity(intent);
+            }
+        });
 
-                    Intent intent = new Intent(getBaseContext(), CadastrarLocal.class);
-
-                    Bundle params = new Bundle();
-                    params.putString("codigo", codigo);
-
-                    intent.putExtras(params);
-
-                    startActivity(intent);
-                }
-            });
-        }
     }
 
     public void onClickAdd(View view) {

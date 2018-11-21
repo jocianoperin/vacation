@@ -27,16 +27,16 @@ public class CadastrarLocal extends AppCompatActivity {
 
             bancoController = new BancoController(getBaseContext());
 
-            EditText livro = (EditText)findViewById(R.id.editText);
-            EditText autor = (EditText)findViewById(R.id.editText2);
-            EditText editora = (EditText)findViewById(R.id.editText3);
             TextView id = findViewById(R.id.textView4);
+            EditText local = (EditText)findViewById(R.id.editText);
+            EditText descricao = (EditText)findViewById(R.id.editText2);
+            EditText estacao = (EditText)findViewById(R.id.editText3);
 
             Cursor cursor = bancoController.carregaDadosById(Integer.parseInt(codigo));
             id.setText(cursor.getString(cursor.getColumnIndexOrThrow(CriaBanco.ID)));
-            livro.setText(cursor.getString(cursor.getColumnIndexOrThrow(CriaBanco.LOCAL)));
-            autor.setText(cursor.getString(cursor.getColumnIndexOrThrow(CriaBanco.DESCRICAO)));
-            editora.setText(cursor.getString(cursor.getColumnIndexOrThrow(CriaBanco.ESTACAO)));
+            local.setText(cursor.getString(cursor.getColumnIndexOrThrow(CriaBanco.LOCAL)));
+            descricao.setText(cursor.getString(cursor.getColumnIndexOrThrow(CriaBanco.DESCRICAO)));
+            estacao.setText(cursor.getString(cursor.getColumnIndexOrThrow(CriaBanco.ESTACAO)));
         }
     }
 
@@ -45,21 +45,21 @@ public class CadastrarLocal extends AppCompatActivity {
         BancoController bancoController = new BancoController(getBaseContext());
 
         TextView id = findViewById(R.id.textView4);
-        EditText titulo = findViewById(R.id.editText);
-        EditText autor = findViewById(R.id.editText2);
-        EditText editora = findViewById(R.id.editText3);
+        EditText local = findViewById(R.id.editText);
+        EditText descricao = findViewById(R.id.editText2);
+        EditText estacao = findViewById(R.id.editText3);
 
-        String tituloString = titulo.getText().toString();
-        String autorString = autor.getText().toString();
-        String editoraString = editora.getText().toString();
+        String localString = local.getText().toString();
+        String descricaoString = descricao.getText().toString();
+        String estacaoString = estacao.getText().toString();
         String idString = id.getText().toString();
 
         String resultado = "";
 
         if(idString == "") {
-            resultado = bancoController.insereDado(tituloString, autorString, editoraString);
+            resultado = bancoController.insereDado(localString, descricaoString, estacaoString);
         }else{
-            resultado = bancoController.alteraDado(idString, tituloString, autorString, editoraString);
+            resultado = bancoController.alteraDado(idString, localString, descricaoString, estacaoString);
         }
 
         Toast.makeText(getBaseContext(), resultado, Toast.LENGTH_SHORT).show();

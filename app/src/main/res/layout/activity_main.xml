@@ -47,6 +47,20 @@
 
         <Button
             android:layout_weight="1"
+            android:id="@+id/btnListar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="toListar"
+            android:text="@string/Listar" />
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:layout_weight="1"
             android:id="@+id/btnData"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

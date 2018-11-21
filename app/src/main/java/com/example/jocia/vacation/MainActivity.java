@@ -27,4 +27,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void toListar(View view) {
+
+        Intent intent = new Intent(this, ExibeLocal.class);
+        startActivity(intent);
+    }
 }
