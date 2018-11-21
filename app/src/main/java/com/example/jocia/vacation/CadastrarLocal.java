@@ -7,7 +7,10 @@ import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,28 +18,61 @@ public class CadastrarLocal extends AppCompatActivity {
 
     String codigo = null;
     BancoController bancoController;
+    String estacaoAno;
+
+    private String[] estacao = new String[]{"Verão", "Primavera", "Outono", "Inverno"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar_local);
 
+        final Spinner combo = findViewById(R.id.comboEstacao);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+                android.R.layout.select_dialog_item, estacao);
+
+        combo.setAdapter(adapter);
+
+        combo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int index, long l) {
+
+                switch (index) {
+                    case 0:
+                        Toast.makeText(CadastrarLocal.this, adapterView.getSelectedItem().toString(),
+                                Toast.LENGTH_SHORT).show();
+                        break;
+                    case 1:
+                        Toast.makeText(CadastrarLocal.this, adapterView.getSelectedItem().toString(),
+                                Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                estacaoAno = adapterView.getSelectedItem().toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
         codigo = this.getIntent().getStringExtra("codigo");
 
-        if(codigo != null){
+        if (codigo != null) {
 
             bancoController = new BancoController(getBaseContext());
 
             TextView id = findViewById(R.id.textView4);
-            EditText local = (EditText)findViewById(R.id.editText);
-            EditText descricao = (EditText)findViewById(R.id.editText2);
-            EditText estacao = (EditText)findViewById(R.id.editText3);
+            EditText local = (EditText) findViewById(R.id.editText);
+            EditText descricao = (EditText) findViewById(R.id.editText2);
+            String estacao = estacaoAno;
 
             Cursor cursor = bancoController.carregaDadosById(Integer.parseInt(codigo));
             id.setText(cursor.getString(cursor.getColumnIndexOrThrow(CriaBanco.ID)));
             local.setText(cursor.getString(cursor.getColumnIndexOrThrow(CriaBanco.LOCAL)));
             descricao.setText(cursor.getString(cursor.getColumnIndexOrThrow(CriaBanco.DESCRICAO)));
-            estacao.setText(cursor.getString(cursor.getColumnIndexOrThrow(CriaBanco.ESTACAO)));
         }
     }
 
@@ -47,18 +83,18 @@ public class CadastrarLocal extends AppCompatActivity {
         TextView id = findViewById(R.id.textView4);
         EditText local = findViewById(R.id.editText);
         EditText descricao = findViewById(R.id.editText2);
-        EditText estacao = findViewById(R.id.editText3);
+        Spinner estacao = findViewById(R.id.comboEstacao);
 
         String localString = local.getText().toString();
         String descricaoString = descricao.getText().toString();
-        String estacaoString = estacao.getText().toString();
+        String estacao = estacaoAno;
         String idString = id.getText().toString();
 
         String resultado = "";
 
-        if(idString == "") {
+        if (idString == "") {
             resultado = bancoController.insereDado(localString, descricaoString, estacaoString);
-        }else{
+        } else {
             resultado = bancoController.alteraDado(idString, localString, descricaoString, estacaoString);
         }
 

@@ -28,7 +28,7 @@ public class ExibeLocal extends AppCompatActivity {
         BancoController bancoController = new BancoController(getBaseContext());
         final Cursor cursor = bancoController.carregaDados();
 
-        String[] nomeCampos = new String[]{CriaBanco.ID, CriaBanco.LOCAL};
+        String[] nomeCampos = new String[]{CriaBanco.LOCAL, CriaBanco.ESTACAO};
         int[] idViews = new int[]{R.id.tituloLocal, R.id.estacaoLocal};
 
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(getBaseContext(), R.layout.list_local_adapter, cursor,
