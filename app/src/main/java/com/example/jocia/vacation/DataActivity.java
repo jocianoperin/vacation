@@ -16,6 +16,7 @@ import com.example.jocia.vacation.R;
 public class DataActivity extends AppCompatActivity {
 
     private String estacao;
+    Intent intent = new Intent(this, LocalActivity.class);
 
     private String[] meses = new String[]{"","Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
     "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
@@ -32,11 +33,13 @@ public class DataActivity extends AppCompatActivity {
 
         combo.setAdapter(adapter);
 
+        Intent intent = new Intent(this, LocalActivity.class);
+
         combo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int index, long l) {
 
-                switch (index){
+                switch (index) {
                     case 0:
                         Toast.makeText(DataActivity.this, "Nenhum local selecionado",
                                 Toast.LENGTH_SHORT).show();
@@ -103,6 +106,7 @@ public class DataActivity extends AppCompatActivity {
                         estacao = "Primavera";
                         break;
                 }
+
             }
 
             @Override
@@ -112,8 +116,8 @@ public class DataActivity extends AppCompatActivity {
                 estacao = "";
             }
         });
-    }
 
+    }
 
     public void toLocal(View view) {
 

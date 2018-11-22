@@ -83,12 +83,12 @@ public class CadastrarLocal extends AppCompatActivity {
         TextView id = findViewById(R.id.textView4);
         EditText local = findViewById(R.id.editText);
         EditText descricao = findViewById(R.id.editText2);
-        Spinner estacao = findViewById(R.id.comboEstacao);
+
 
         String localString = local.getText().toString();
         String descricaoString = descricao.getText().toString();
-        String estacao = estacaoAno;
         String idString = id.getText().toString();
+        String estacaoString = estacaoAno;
 
         String resultado = "";
 
