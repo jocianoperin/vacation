@@ -27,6 +27,7 @@ public class CadastrarLocal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar_local);
 
+
         final Spinner combo = findViewById(R.id.comboEstacao);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
@@ -100,20 +101,25 @@ public class CadastrarLocal extends AppCompatActivity {
 
         Toast.makeText(getBaseContext(), resultado, Toast.LENGTH_SHORT).show();
 
-        Intent intent = new Intent(this, ExibeLocal.class);
-        startActivity(intent);
-    }
-
-    public void onClickExcluir(View view) {
-        TextView id = findViewById(R.id.textView4);
-        String idString = id.getText().toString();
-
-        BancoController bancoController = new BancoController(getBaseContext());
-        String resultado = bancoController.excluiRegistro(idString);
-
-        Toast.makeText(getBaseContext(), resultado, Toast.LENGTH_SHORT).show();
-
         Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
+
+//AGORA É SO CLICAR NO ITEM E SEGURAR QUE APARECE O BOTAO DE DELETE
+
+//    public void onClickExcluir(View view) {
+//        TextView id = findViewById(R.id.textView4);
+//        String idString = id.getText().toString();
+//
+//        BancoController bancoController = new BancoController(getBaseContext());
+//        String resultado = bancoController.excluiRegistro(idString);
+//
+//        Toast.makeText(getBaseContext(), resultado, Toast.LENGTH_SHORT).show();
+//
+//        Intent intent = new Intent(this, MainActivity.class);
+//        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//        startActivity(intent);
+//
+//    }
 }
