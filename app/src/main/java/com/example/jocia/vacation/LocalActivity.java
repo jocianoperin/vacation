@@ -21,18 +21,22 @@ public class LocalActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        int estacao = this.getIntent().getExtras().getInt("estacao", 0);
-
-        int destino = 0;
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_local);
+
+        Intent intent = getIntent();
+        final int estacao = (int) intent.getSerializableExtra("id_estacao");
+
+//        int estacao = this.getIntent().getExtras().getInt("estacao", 0);
+//
+//        int destino = 0;
+
+
         lvOpcoes = (ListView) findViewById(R.id.locais);
 
         opcoes = new ArrayList<String>();
 
-        if (estacao == 1) {
+        if (estacao == 2) {
             opcoes.add("Porto de Galinhas");
             opcoes.add("Morro de São Paulo");
             opcoes.add("Natal");
@@ -57,7 +61,7 @@ public class LocalActivity extends AppCompatActivity {
                 }
             });
 
-        }else if (estacao == 2){
+        }else if (estacao == 1){
             opcoes.add("Joinville");
             opcoes.add("Holambra");
             opcoes.add("Cunha");
@@ -82,7 +86,7 @@ public class LocalActivity extends AppCompatActivity {
                 }
             });
 
-        }else if (estacao == 3){
+        }else if (estacao == 4){
             opcoes.add("Bariloche");
             opcoes.add("Mendoza");
             opcoes.add("Santiago");
@@ -107,7 +111,7 @@ public class LocalActivity extends AppCompatActivity {
                 }
             });
 
-        }else if (estacao == 4){
+        }else if (estacao == 3){
             opcoes.add("Toscana");
             opcoes.add("Praga");
             opcoes.add("Hallstatt");

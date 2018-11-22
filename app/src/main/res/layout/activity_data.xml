@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadastrarLocal"
+    tools:context=".DataActivity"
     android:orientation="vertical"
     android:layout_gravity="center">
 
@@ -13,25 +13,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/txtSelecioneMês"/>
+        android:text="Selecione a data de início das férias"/>
 
-    <Spinner
-        android:prompt="@string/selecione_mes"
-        android:spinnerMode="dialog"
-        android:id="@+id/comboMes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_gravity="center"
+        android:id="@+id/btnDataInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecionar data"
+        android:layout_marginTop="30dp">
 
+    </Button>
 
     <Button
         android:layout_gravity="center"
         android:id="@+id/btnBuscarLocais"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btnBuscaLocais"
+        android:text="Todos os locais"
         android:onClick="toLocal"
         android:layout_marginTop="30dp">
 
     </Button>
-
 </LinearLayout>
